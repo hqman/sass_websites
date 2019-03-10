@@ -1,0 +1,8 @@
+.section--about {
+  &__title {
+    color: gray(1);
+  }
+  img {
+    box-shadow: $box-shadow;
+  }
+}

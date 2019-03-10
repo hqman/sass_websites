@@ -26,17 +26,33 @@ h3 {
   color: #fff;
   font-size: 3rem;
   line-height: 1.2;
+  letter-spacing: 0.08em;
 }
 
 .section__title {
   color: #f55d3e;
+  font-size: 3rem;
+}
+
+.section__title--white {
+  color: #fff;
 }
 
 .section__subtitle {
   color: #9d9d9d;
   font-size: 1.68em;
   line-height: 1.1;
-  margin-top: 0.5em;
+  margin-top: 0.75em;
+  font-weight: 400;
+}
+
+.section__subtitle::after {
+  content: "";
+  display: block;
+  margin: 2em auto;
+  background: currentColor;
+  height: 1.5px;
+  width: 25%;
 }
 
 *,
@@ -54,10 +70,6 @@ body {
 
 .section {
   padding: 4em 2em;
-}
-
-.section--about {
-  background: gray;
 }
 
 .nav {
@@ -83,6 +95,7 @@ body {
 .nav a {
   text-decoration: none;
   color: #fff;
+  font-size: 1.2em;
 }
 
 .logo {
@@ -95,9 +108,59 @@ body {
   background-size: cover;
   min-height: 80vh;
   padding: 10em 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body {
-  background-color: #fff;
+.section--about__title {
+  color: #fff;
+}
+
+.section--about img {
+  -webkit-box-shadow: 0 0 0.5em rgba(157, 157, 157, 0.5);
+          box-shadow: 0 0 0.5em rgba(157, 157, 157, 0.5);
+}
+
+.section--facts {
+  background-color: #f3f3f3;
+}
+
+.section--meals {
+  background-image: url(../imgs/meals-bg.jpg);
+}
+
+.meals {
+  font-weight: 400;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.meals__meal {
+  position: relative;
+  margin-bottom: 2em;
+}
+
+.meals__img {
+  display: block;
+  max-width: 450px;
+}
+
+.meals__caption {
+  position: absolute;
+  background: rgba(33, 33, 33, 0.5);
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.meals__title {
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

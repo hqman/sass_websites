@@ -26,16 +26,24 @@ h3 {
   color: gray(1);
   font-size: 3rem;
   line-height: 1.2;
+  letter-spacing: 0.08em;
 }
 .section {
   &__title {
     color: $primary;
+    font-size: 3rem;
+
+    &--white {
+      color: gray(1);
+    }
   }
 
   &__subtitle {
     color: gray(3);
     font-size: 1.68em;
     line-height: 1.1;
-    margin-top: 0.5em;
+    margin-top: 0.75em;
+    font-weight: $fw-normal;
+    @include underline();
   }
 }
