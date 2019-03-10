@@ -1,0 +1,19 @@
+@import "abstracts";
+@import "variables";
+@import "nav";
+
+/** sass 特性 */ // 1. Nesting and parant selector
+// 2. mixins
+//3. imports
+/*------------ mixins---*/ // DRY
+body {
+  background: red;
+  @include uppercase;
+  @include mq(500px) {
+    background-color: #fff;
+  }
+}
+
+.subtitle {
+  @include uppercase;
+}

@@ -1,0 +1,9 @@
+@mixin mq($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+@mixin uppercase {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

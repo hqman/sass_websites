@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700");
+//colors 定义颜色
+$white: #fff;
+$light-gray: rgba(0, 0, 0, 0.15);
+$dark-gray: rgba(0, 0, 0, 0.5);
+$green: #72b01d;
+
+$clr-accent: $green;
+$clr-body: $dark-gray;
+$clr-heading: $clr-accent;
+
+// typography 字体
+
+$ff: "Raleway", sans-serif;
+
+// font weight
+$fw-l: 300;
+$fw-n: 400;
+$fw-b: 700;
+
+//font size 字体大小
+$fs-h2: (48/16) * 1rem;
+$fs-body: (24/16) * 1rem;
+$fs-xl: (72/16) * 1rem;
+$fs-sm: (16/16) * 1rem;
+//letter spacing
+$ls: 5px;
+
+//helper
+$spacer: 1rem;
+
+//box shadow
+$bs: 0 0 $spacer $light-gray;
+
+// style begin
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $ff;
+  font-size: $fs-body;
+  color: $clr-body;
+}
+
+h2 {
+  font-size: $fs-h2;
+  color: $clr-heading;
+  letter-spacing: $ls;
+  text-transform: uppercase;
+  margin-bottom: $spacer * 5;
+}
+
+.pricing {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.prices {
+  width: 95%;
+  max-width: 1200px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.price {
+  background-color: $white;
+  box-shadow: $bs;
+  padding: 5 * $spacer;
+  // 除了第一个之外 左边空 .price + .price
+  & + & {
+    margin-left: $spacer;
+  }
+
+  &__title {
+    // font-size: $fs-h2;
+    letter-spacing: $ls;
+    color: $clr-heading;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__list-item {
+    &:not(:last-of-type)::after {
+      content: "";
+      display: block;
+      height: 1px;
+      background: $light-gray;
+      margin: ($spacer * 2) 0;
+    }
+  }
+
+  &__cost {
+    color: $clr-heading;
+    // letter-spacing: $ls;
+    font: {
+      size: $fs-xl;
+      weight: $fw-b;
+    }
+
+    span {
+      font: {
+        size: $fs-body;
+        weight: $fw-l;
+      }
+    }
+  }
+  &--accent {
+    background-color: $clr-accent;
+    padding-top: $spacer * 8;
+    padding-bottom: $spacer * 8;
+    margin-top: $spacer * -3;
+    margin-bottom: $spacer * -3;
+
+    & .price__title,
+    & .price__cost {
+      color: $white;
+    }
+  }
+}
+// Buttons
+
+.button {
+  display: inline-block;
+  padding: ($spacer * 1.5) ($spacer * 2);
+  background-color: $dark-gray;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $white;
+  font-size: $fs-sm;
+  letter-spacing: $ls;
+  transition: all ease-out 200ms;
+  &:hover {
+    box-shadow: $bs;
+    background-color: $clr-accent;
+    transform: scale(1.2);
+  }
+  &--accent {
+    background-color: $white;
+    color: $clr-accent;
+    &:hover {
+      background-color: $dark-gray;
+    }
+  }
+}

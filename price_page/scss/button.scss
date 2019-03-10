@@ -1,0 +1,22 @@
+// %xxx is a placeholder
+// but not transform to css
+
+%btn {
+  text: {
+    transform: uppercase;
+    decoration: none;
+  }
+  padding: 1em 4em;
+  display: inline;
+}
+.primary-btn {
+  @extend %btn;
+  color: red;
+  background-color: #fff;
+}
+
+.secondary-btn {
+  @extend %btn;
+  color: black;
+  background-color: green;
+}

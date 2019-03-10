@@ -1,0 +1,29 @@
+#app-header {
+  .logo {
+    color: $white;
+  }
+}
+
+.nav {
+  padding: 5px;
+  background-color: lightblue;
+  ul {
+    margin: 0;
+    display: flex;
+  }
+  // 可以用作 命名空间 避免css 冲突
+  &__list {
+    margin-left: 10px;
+  }
+  &__item {
+    margin-left: 5px;
+  }
+
+  &-toggle {
+    padding: 0;
+  }
+  // toogle 后面 的同级兄弟 节点
+  &-toggle ~ &__menu {
+    color: $white;
+  }
+}
