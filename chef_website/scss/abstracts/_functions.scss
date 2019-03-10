@@ -1,0 +1,7 @@
+@function gray($index: 4) {
+  @if type-of($index) != number or $index <1 or $index >5 {
+    @error 'grays() index 错误';
+  }
+  $value: map-get($grays, $index);
+  @return $value;
+}

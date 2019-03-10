@@ -1,0 +1,23 @@
+.nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: $spacer;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: serif;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  a {
+    text-decoration: none;
+    color: gray(1);
+    // color: gray(1);
+  }
+}
+
+.logo {
+  display: none;
+}

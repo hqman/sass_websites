@@ -1,0 +1,12 @@
+@import "abstracts/colors";
+@import "abstracts/typography";
+@import "abstracts/general";
+@import "abstracts/functions";
+@import "base/typography";
+@import "layout/general";
+@import "layout/nav";
+@import "layout/home";
+
+body {
+  background-color: gray(1);
+}

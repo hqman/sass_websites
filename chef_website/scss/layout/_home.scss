@@ -1,0 +1,7 @@
+.section--home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+    url(../imgs/hero-bg.jpg);
+  background-size: cover;
+  min-height: 80vh;
+  padding: 10em $spacer;
+}
